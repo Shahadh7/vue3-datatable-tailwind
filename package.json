@@ -1,8 +1,10 @@
 {
   "name": "vue3-datatable-tailwind",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/my-lib.umd.js",
   "module": "./dist/my-lib.es.js",
   "exports": {
