@@ -1,47 +1,38 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import DataTable from './components/DataTable.vue'
+import { ref } from 'vue';
+
+const tableHeads = ref([
+    { name:'id', title: 'id', sort: true },
+    { name:'fname', title: 'First name', sort: false },
+    { name:'lname', title: 'Last name', sort: false },
+    { name:'username', title: 'Username', sort: false },
+]);
+
+const link = ref("https://www.melivecode.com/api/users")
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
   <main>
-    <TheWelcome />
+    <DataTable 
+      :table-text-alignment="'text-center'"
+      :data-per-page-option-visible="true"
+      :search-visible="true" 
+      :table-heads="tableHeads"
+      :link="link"
+      >
+        <template #table-data="slotProps">
+          <tr v-if="slotProps.data.length === 0"> No data found</tr>
+          <tr v-for="(user, index) in slotProps.data" :key="index">
+              <td :class="slotProps.css">{{ user.id }}</td>
+              <td :class="slotProps.css">{{ user.fname }}</td>
+              <td :class="slotProps.css">{{ user.lname }}</td>
+              <td :class="slotProps.css">{{ user.username }}</td>
+          </tr>
+        </template>
+    </DataTable>
   </main>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
