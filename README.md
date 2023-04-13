@@ -5,7 +5,7 @@ Datatable component for Vue3 composition API and tailwind with the basic functio
 
 ## Project setup
 ```
-npm install --save shady-vue3-datatable
+npm i shady-vue3-datatable
 ```
 
 
