@@ -1,6 +1,6 @@
 {
-  "name": "vue3-datatable-test",
-  "version": "0.0.3",
+  "name": "shady-vue3-datatable",
+  "version": "0.0.1",
   "private": false,
   "files": [
     "dist"
