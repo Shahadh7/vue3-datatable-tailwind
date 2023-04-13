@@ -5,8 +5,11 @@
   "files": [
     "dist"
   ],
+  "repository": "https://github.com/Shahadh7/vue3-datatable-tailwind",
+  "bugs": "https://github.com/Shahadh7/vue3-datatable-tailwind/issues",
   "main": "./dist/my-lib.umd.js",
   "module": "./dist/my-lib.es.js",
+  "license": "MIT",
   "exports": {
     ".": {
       "import": "./dist/my-lib.es.js",
