@@ -1,35 +1,53 @@
 # vue3-datatable-tailwind
 
-This template should help get you started developing with Vue 3 in Vite.
+Datatable component for Vue3 composition API and tailwind with the basic functionalities such as Pagination, Sort, Search and more
 
-## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+## Project setup
+```
+npm install --save shady-vue3-datatable
 ```
 
-### Compile and Hot-Reload for Development
 
-```sh
-npm run dev
+## Basic Usage
+```
+<template>
+  <DataTable 
+        :data-per-page-option-visible="true"
+        :search-visible="true" 
+        :table-heads="tableHeads"
+        :link="link"
+        :table-text-alignment="'text-center'"
+    > 
+        <template #table-data="slotProps">
+            <tr v-if="slotProps.data.length === 0"> No data found</tr>
+            <tr v-for="(user, index) in slotProps.data" :key="index">
+                <td :class="slotProps.css">{{ user.id }}</td>
+                <td :class="slotProps.css">{{ user.fname }}</td>
+                <td :class="slotProps.css">{{ user.lname }}</td>
+                <td :class="slotProps.css">{{ user.username }}</td>
+            </tr>
+        </template>
+    </DataTable>
+</template>
+<script script>
+
+import { DataTable } from 'shady-vue3-datatable';
+import { ref } from 'vue';
+
+const tableHeads = ref([
+    { name:'id', title: 'id', sort: true, class: '' },
+    { name:'fname', title: 'First name', sort: false, class: '' },
+    { name:'lname', title: 'Last name', sort: false, class: '' },
+    { name:'username', title: 'Username', sort: false, class: '' },
+]);
+
+const link = ref("https://www.myapi.com/api/users")
+
+</script>
 ```
 
-### Compile and Minify for Production
 
-```sh
-npm run build
-```
+## LICENSE
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+[MIT](https://choosealicense.com/licenses/mit/) © Shahadh
