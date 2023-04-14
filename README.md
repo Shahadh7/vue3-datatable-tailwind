@@ -7,7 +7,7 @@ Datatable component for Vue3 composition API and tailwind with the basic functio
 
 
 ## Project setup
-[https://jocular-bombolone-c89826.netlify.app/]
+https://jocular-bombolone-c89826.netlify.app/
 
 
 ## Basic Usage
