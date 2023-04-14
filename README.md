@@ -33,13 +33,14 @@ npm i shady-vue3-datatable
 <script script>
 
 import { DataTable } from 'shady-vue3-datatable';
+import 'shady-vue3-datatable/dist/style.css'
 import { ref } from 'vue';
 
 const tableHeads = ref([
-    { name:'id', title: 'id', sort: true, class: '' },
-    { name:'fname', title: 'First name', sort: false, class: '' },
-    { name:'lname', title: 'Last name', sort: false, class: '' },
-    { name:'username', title: 'Username', sort: false, class: '' },
+    { name:'id', title: 'id', sort: true },
+    { name:'fname', title: 'First name', sort: false },
+    { name:'lname', title: 'Last name', sort: false },
+    { name:'username', title: 'Username', sort: false },
 ]);
 
 const link = ref("https://www.myapi.com/api/users")

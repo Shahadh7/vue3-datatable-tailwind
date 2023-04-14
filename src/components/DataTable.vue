@@ -41,7 +41,7 @@
 </template>
 
 <script setup>
-import { onMounted, ref, watchEffect } from 'vue';
+import { ref, watchEffect } from 'vue';
 import AboveControls from './AboveControls.vue'
 import Pagination from './Pagination.vue'
 
