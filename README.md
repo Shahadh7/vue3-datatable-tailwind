@@ -4,10 +4,14 @@ Datatable component for Vue3 composition API and tailwind with the basic functio
 
 
 ## Demo
+https://jocular-bombolone-c89826.netlify.app/
 
 
 ## Project setup
-https://jocular-bombolone-c89826.netlify.app/
+```
+npm i shady-vue3-datatable
+
+```
 
 
 ## Basic Usage
