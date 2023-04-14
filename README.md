@@ -3,10 +3,11 @@
 Datatable component for Vue3 composition API and tailwind with the basic functionalities such as Pagination, Sort, Search and more
 
 
+## Demo
+
+
 ## Project setup
-```
-npm i shady-vue3-datatable
-```
+[https://jocular-bombolone-c89826.netlify.app/]
 
 
 ## Basic Usage
